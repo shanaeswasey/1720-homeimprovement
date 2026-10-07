@@ -1,0 +1,61 @@
+/* Changes the layout for larger screens */
+@media only screen and (min-width: 40rem) {
+
+    /* Removes the extra bottom space on larger screens */
+    body {
+        padding-bottom: 0;
+        /* The navigation is no longer fixed at the bottom */
+    }
+
+    /* Keeps the main page sections from getting too wide */
+    header,
+    main,
+    nav,
+    footer {
+        max-width: 1200px;
+        /* Sets the widest the content can grow */
+        margin: 0 auto;
+        /* Centers the content on the page */
+    }
+
+
+    /******************************** NAVIGATION ********************************/
+
+    /* Moves the navigation back into the normal page layout */
+    nav {
+        /* Stops the navigation from staying fixed at the bottom */
+        position: static;
+
+    }
+
+    /* Controls each navigation item */
+    nav li {
+        /* Lets the navigation items share the available space */
+        display: flex;
+
+        /* Makes each navigation item grow evenly */
+        flex-grow: 1;
+
+        /* Stacks the icon and text inside each navigation item */
+        flex-direction: column;
+
+    }
+
+    /* Makes each navigation link fill its section */
+    nav a {
+        /* Makes the link fill the full width of its navigation item */
+        width: 100%;
+
+    }
+
+    /******************************** HEADER ********************************/
+    header {
+        grid-template-columns: 1fr;
+    }
+
+
+
+
+}
+
+/* Ends the larger-screen layout rules */

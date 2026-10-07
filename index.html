@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Sets the page language to English -->
+
+<head> <!-- Holds page settings and links that are not shown as page content -->
+    <!-- Lets the page show letters, numbers, and symbols correctly -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Helps the page fit correctly on phones, tablets, and computers -->
+    <title>Shanae Swasey Home Improvement | DWDD1720</title> <!-- Sets the name shown on the browser tab -->
+
+    <!-- Describes the page for search engines -->
+    <meta name="description" content="Practice Page for Shanae Swasey's DWDD1720 Home Improvement Assignment.">
+
+    <!-- STYLESHEETS --> <!-- Connects the CSS files that control how the page looks -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- Helps the page look more consistent in different browsers -->
+    <link rel="stylesheet" href="styles/small.css"> <!-- Controls how the page looks on smaller screens -->
+    <link rel="stylesheet" href="styles/larger.css"> <!-- Controls how the page changes on larger screens -->
+
+    <!--GOOGLE FONT-->
+    <!-- Connects the page to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Connects to the server that stores the font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Loads the Google font onto the page -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+
+    <!--OPEN GRAPH TAGS--> <!-- Controls the title, description, and image shown when the website link is shared -->
+    <!-- Sets the title shown when the website link is shared -->
+
+    <!-- Sets the full URL for this webpage -->
+    <meta property="og:url" content="https://shanaeswasey.github.io/1720-homeimprovement/">
+
+    <!-- Tells social media that this is a website -->
+    <meta property="og:type" content="website">
+
+    <!-- Sets the title that appears when the page is shared -->
+    <meta property="og:title" content="Shanae Swasey Home Improvement | DWDD1720">
+
+    <!-- Sets the description that appears when the page is shared -->
+    <meta property="og:description" content="Practice Page for Shanae Swasey's DWDD1720 Home Improvement Assignment.">
+
+
+    <!-- Sets the image that appears when the page is shared -->
+    <meta property="og:image" content="https://shanaeswasey.github.io/1720-homeimprovement/images/opengraph.jpg">
+
+    <!-- Sets the logo used for the website -->
+    <meta property="og:logo" content="https://shanaeswasey.github.io/1720-homeimprovement/images/logo.svg">
+
+
+    <!-- Sets the name of the website -->
+    <meta property="og:site_name" content="Project Depot">
+
+
+
+    <!--FAV ICON LINKS--> <!-- Connects the favicon images used in the browser tab and on devices -->
+    <!-- Uses a 96x96 PNG image as a favicon -->
+    <link rel="icon" type="image/png" href="/1720-homeimprovement/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Uses the SVG version of the favicon -->
+    <link rel="icon" type="image/svg+xml" href="/1720-homeimprovement/favicon.svg" />
+
+    <!-- Uses the standard favicon file -->
+    <link rel="shortcut icon" href="/1720-homeimprovement/favicon.ico" />
+
+    <!-- Sets the icon used when the website is saved to an Apple device -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/1720-homeimprovement/apple-touch-icon.png" />
+
+    <!-- Sets the website name shown when saved to an Apple device -->
+    <meta name="apple-mobile-web-app-title" content="Project Depot" />
+
+    <!-- Connects the file that stores extra favicon information -->
+    <link rel="manifest" href="/1720-homeimprovement/site.webmanifest" />
+
+
+
+    <!--SCRIPTS--> <!-- Connects the JavaScript files that make parts of the page work -->
+
+    <!-- Calculates the paint and carpet supplies -->
+    <script src="scripts/calculate.js" defer></script>
+
+    <!-- Automatically puts the current year in the footer -->
+    <script src="scripts/year.js" defer></script>
+
+
+
+</head> <!-- Ends the section that holds the page settings and linked files -->
+
+<body> <!-- Starts everything that will actually show on the webpage -->
+    <header>
+        <!-- Shows the logo at the top of the page -->
+        <img src="images/logo.svg" alt="Project Depot Logo" width="124" height="50">
+
+
+    </header>
+
+    <!-- Starts the navigation menu -->
+    <nav id="navbar">
+
+        <ul> <!-- Starts the list of navigation links -->
+
+            <!-- Link to Supplies -->
+            <li>
+                <a href="#">
+                    <img src="images/nav-supplies.svg">
+                    <div>Supplies</div>
+                </a>
+            </li>
+
+            <!-- Shows the page that is currently being viewed -->
+            <li class="active">
+                <a href="index.html">
+                    <img src="images/nav-calculator.svg">
+                    <div>Calculator</div>
+                </a>
+            </li>
+
+            <!-- Link to Find Colors -->
+            <li>
+                <a href="#">
+                    <img src="images/nav-color.svg">
+                    <div>Find Colors</div>
+                </a>
+            </li>
+
+            <!-- Link to For Pros -->
+            <li>
+                <a href="#">
+                    <img src="images/nav-pros.svg">
+                    <div>For Pros</div>
+                </a>
+            </li>
+
+        </ul> <!-- Ends the list of navigation links -->
+
+    </nav> <!-- Ends the navigation menu -->
+
+
+    <!-- Starts the main content area of the page -->
+    <main>
+
+        <!-- Shows the large hero image at the top of the page -->
+        <img class="hero" src="images/hero.webp" alt="Home improvement tools and supplies">
+
+        <!-- Starts the home improvement calculator -->
+        <section class="calculator">
+
+            <!-- Shows the calculator heading -->
+            <h1>Home Improvement Calculator</h1>
+
+            <!-- Starts the calculator form -->
+            <form>
+
+                <!-- Gets the room width -->
+                <label for="width">Room Width</label>
+                <input type="number" id="width" required>
+
+                <!-- Gets the room depth -->
+                <label for="depth">Room Depth</label>
+                <input type="number" id="depth" required>
+
+                <!-- Gets the wall height -->
+                <label for="height">Wall Height</label>
+                <input type="number" id="height" required>
+
+                <!-- Lets the user choose the paint quality -->
+                <label for="quality">Paint Quality</label>
+                <select id="quality">
+                    <option value="none" disabled selected>Select an Option</option>
+                    <option value="600">Premium (600sqft per gallon)</option>
+                    <option value="500">Standard (500sqft per gallon)</option>
+                    <option value="400">Cheap (400sqft per gallon)</option>
+                </select>
+
+                <!-- Calculates the supplies needed -->
+                <button type="button" id="calculate">Calculate Supplies</button>
+
+                <!-- Shows a message if the form is not filled out -->
+                <p id="error-message"></p>
+
+            </form> <!-- Ends the calculator form -->
+
+
+            <!-- Shows the calculated supply list -->
+            <section class="results">
+
+                <!-- Shows the paint supplies needed -->
+                <div>
+                    <h2>Paint Supplies</h2>
+                    <div id="paint-results"></div>
+                </div>
+
+                <!-- Shows the carpet supplies needed -->
+                <div>
+                    <h2>Carpet Supplies</h2>
+                    <div id="carpet-results"></div>
+                </div>
+
+            </section> <!-- Ends the calculated supply list -->
+
+        </section> <!-- Ends the home improvement calculator -->
+
+
+
+
+    </main> <!-- Ends the main content area -->
+
+    <!-- Starts the footer at the bottom of the page -->
+    <footer>
+        <!-- Holds the social media links -->
+        <section class="social">
+
+            <!-- Links to GitHub -->
+            <a href="https://www.github.com" target="_blank"><img src="images/icon-github.svg" alt="GitHub Icon"
+                    width="16" height="16"></a>
+
+            <!-- Links to LinkedIn -->
+            <a href="https://www.linkedin.com" target="_blank"><img src="images/icon-linkedin.svg" alt="LinkedIn Icon"
+                    width="16" height="16"></a>
+
+            <!-- Links to YouTube -->
+            <a href="https://www.youtube.com" target="_blank"><img src="images/icon-youtube.svg" alt="Youtube Icon"
+                    width="16" height="16"></a>
+
+            <!-- Links to Facebook -->
+            <a href="https://www.facebook.com" target="_blank"><img src="images/icon-facebook.svg" alt="Facebook Icon"
+                    width="16" height="16"></a>
+        </section> <!-- Ends the social media links -->
+
+        <!-- Shows the current year, your name, and course name -->
+        <p>&copy; <span id="currentyear"></span> &bull; Shanae Swasey &bull; DWDD1720</p>
+
+    </footer><!-- Ends the footer -->
+</body> <!-- Ends everything shown on the page -->
+
+</html> <!-- Ends the entire HTML document -->

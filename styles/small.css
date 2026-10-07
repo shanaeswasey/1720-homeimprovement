@@ -1,0 +1,375 @@
+/* Changes the layout for smaller screens */
+
+/******************************** COLOR SCHEME ********************************/
+:root {
+    --color-primary: #244A73;
+    --color-secondary: #F56FA1;
+
+    /*Series of Grey Scale Colors*/
+    --color-mygrey-05: lab(98% 0 0);
+    --color-mygrey-10: lab(97% 0 0);
+    --color-mygrey-20: lab(91% 0 0);
+    --color-mygrey-30: lab(85% 0 0);
+    --color-mygrey-40: lab(66% 0 0);
+    --color-mygrey-50: lab(48% 0 0);
+    --color-mygrey-60: lab(34% 0 0);
+    --color-mygrey-70: lab(27% 0 0);
+    --color-mygrey-80: lab(15% 0 0);
+    --color-mygrey-90: lab(8% 0 0);
+    --color-mygrey-95: lab(3% 0 0);
+
+
+}
+
+
+/******************************** BORDER BOX ********************************/
+/* Makes sizing and scrolling work more smoothly on the whole page */
+* {
+    box-sizing: border-box;
+    /* Makes sizing and scrolling work more smoothly on the whole page */
+    scroll-behavior: smooth;
+    /* Makes the page scroll smoothly when moving to another section */
+}
+
+/******************************** BODY TAGS ********************************/
+/* Controls the basic look of the whole page */
+body {
+    font-family: "Nunito", sans-serif;
+    /* Uses the chosen font on the whole page */
+    background-color: var(--color-mygrey-05);
+    /* Changes the color of the website background */
+    padding-bottom: 70px;
+    /* Leaves room at the bottom for the fixed navigation menu */
+}
+
+/* Makes the hero image fill the screen width */
+.hero {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/******************************** HEADER ********************************/
+/* Controls how the top header of the page looks */
+header {
+    padding: 10px;
+    /* Adds space around the inside of the header */
+
+    display: block;
+    /* Lets the logo sit normally inside the header */
+
+    border-bottom: solid 1px var(--color-mygrey-20);
+    /* Adds a line under the header */
+}
+
+/* Controls the logo inside the header */
+header img {
+    display: block;
+    /* Makes the logo behave like its own block */
+
+    width: 124px;
+    /* Matches the width of the logo file */
+
+    height: auto;
+    /* Keeps the logo from looking stretched */
+}
+
+
+
+/******************************** NAVIGATION ********************************/
+
+/* Controls how the navigation menu looks */
+nav {
+    /* Sets the background color of the navigation menu */
+    background-color: var(--color-primary);
+
+    /* Keeps the navigation menu at the bottom of the screen */
+    position: fixed;
+
+    /* Places the navigation menu at the bottom */
+    bottom: 0;
+
+    /* Makes the navigation menu fill the full screen width */
+    width: 100%;
+
+}
+
+/* Controls the list of navigation links */
+nav ul {
+    /* Removes the outside space around the navigation list */
+    margin: 0;
+
+    /* Removes the inside space around the navigation list */
+    padding: 0;
+
+    /* Removes the bullet points from the navigation links */
+    list-style-type: none;
+
+    /* Places the navigation links next to each other */
+    display: flex;
+
+    /* Centers the navigation links */
+    justify-content: center;
+
+}
+
+/* Controls each navigation item */
+nav li {
+    /* Makes each navigation item take up equal space */
+    flex-grow: 1;
+
+}
+
+/* Controls the size of the navigation icons */
+nav img {
+    /* Sets the width of each navigation icon */
+    width: 22px;
+
+    /* Sets the height of each navigation icon */
+    height: 22px;
+
+}
+
+/* Controls the navigation links and how they look */
+nav a {
+    /* Makes each navigation link act like a block */
+    display: block;
+
+    /* Sets the size of the navigation link text */
+    font-size: 0.7rem;
+
+    /* Sets the navigation text to normal thickness */
+    font-weight: 400;
+
+    /* Changes the navigation text color */
+    color: #fff;
+
+    /* Removes the underline from the navigation links */
+    text-decoration: none;
+
+    /* Adds space inside each navigation link */
+    padding: 0.8rem;
+
+    /* Centers the icon and text */
+    text-align: center;
+
+}
+
+/* Changes the navigation link when the mouse is over it */
+nav a:hover {
+    background-color: var(--color-secondary);
+    /* Changes the background color when hovering */
+
+    color: #fff;
+    /* Keeps the icon and text easy to see */
+}
+
+
+
+/* Shows which navigation link is currently active */
+nav li.active a {
+    /* Changes the background color of the active page */
+    background-color: var(--color-secondary);
+
+    /* Changes the text color of the active page */
+    color: #eee;
+
+}
+
+/* Shows the navigation menu when needed */
+nav.show {
+    /* Makes the navigation menu visible */
+    display: block;
+
+}
+
+
+
+/******************************** MAIN STUFF ********************************/
+h1 {
+    font-size: 1.5rem;
+    /* Sets the heading text size */
+    color: var(--color-primary);
+    /* Sets the heading text color */
+    font-weight: 500;
+    /* Sets the text thickness */
+    margin-left: 10px;
+    /* Adds space to the left of the heading so it's not on the edge of the page */
+}
+
+p {
+    color: var(--color-primary);
+}
+
+
+/******************************** CALCULATOR ********************************/
+
+/* Controls the main calculator section */
+.calculator {
+    padding: 1rem;
+    /* Adds space around the calculator */
+}
+
+/* Controls the calculator form */
+.calculator form {
+    display: grid;
+    /* Places the form items in a simple grid */
+
+    gap: 0.5rem;
+    /* Adds space between the form items */
+}
+
+/* Controls the form labels */
+.calculator label {
+    font-weight: 600;
+    /* Makes the labels easier to read */
+}
+
+/* Controls the number inputs and paint selection */
+.calculator input,
+.calculator select {
+    width: 100%;
+    /* Makes the form fields fill the available width */
+
+    padding: 0.75rem;
+    /* Adds space inside the form fields */
+
+    border: solid 1px var(--color-mygrey-30);
+    /* Adds a light border around the form fields */
+
+    border-radius: 4px;
+    /* Slightly rounds the corners */
+}
+
+/* Controls the calculate button */
+#calculate {
+    margin-top: 0.5rem;
+    /* Adds space above the button */
+
+    padding: 0.85rem;
+    /* Adds space inside the button */
+
+    border: none;
+    /* Removes the default button border */
+
+    border-radius: 4px;
+    /* Slightly rounds the button corners */
+
+    background-color: var(--color-secondary);
+    /* Uses the pink project color */
+
+    color: white;
+    /* Makes the button text white */
+
+    font-weight: 700;
+    /* Makes the button text stand out */
+
+    cursor: pointer;
+    /* Shows the pointer when hovering over the button */
+}
+
+/* Changes the button when the mouse is over it */
+#calculate:hover {
+    background-color: var(--color-primary);
+    /* Changes the button to navy when hovering */
+}
+
+
+/* Controls how the error message looks */
+#error-message {
+    color: var(--color-primary);
+    /* Makes the error message stand out */
+
+    font-weight: 600;
+    /* Makes the error message easier to notice */
+
+    margin: 0.5rem 0;
+    /* Adds space above and below the message */
+}
+
+
+/* Adds space above the calculated results */
+.results {
+    margin-top: 1.5rem;
+    /* Separates the results from the form */
+}
+
+/* Controls the result list items */
+.results p {
+    margin: 0.5rem 0;
+    /* Adds space between each supply item */
+
+    color: var(--color-primary);
+    /* Makes the supply list easy to read */
+}
+
+/******************************** HIDE CONTENT ********************************/
+.hide {
+    display: none;
+    /* Hides the section that should not be showing */
+}
+
+
+/******************************** SOCIAL STUFF ********************************/
+/* Controls the social media icon section */
+.social {
+    display: flex;
+    /* Places the social icons in a row */
+    justify-content: center;
+    /*Centers the icons in the section*/
+    column-gap: 8px;
+    /*Adds space between icons*/
+}
+
+/* Controls the size of the social media icons */
+.social img {
+    display: block;
+    /* Makes each icon behave like its own block */
+    width: 22px;
+    /*Sets the width of each icon*/
+    height: 22px;
+    /*Sets the height of each icon*/
+}
+
+/* Controls the clickable boxes around the social media icons */
+.social a {
+    border: solid 1px var(--color-mygrey-30);
+    /* Adds a thin border around each link */
+    border-radius: 4px;
+    /* Slightly rounds the corners of each box */
+    width: 44px;
+    /* Sets the width of each icon box */
+    height: 44px;
+    /* Sets the height of each icon box */
+    display: flex;
+    /* Lets the icon be centered inside the box */
+    justify-content: center;
+    /* Centers the icon from left to right */
+    align-items: center;
+    /* Centers the icon from top to bottom */
+    background-color: var(--color-mygrey-05);
+    /* Gives the icon box a light transparent background */
+
+}
+
+/* Changes the social icon box when the mouse is over it */
+.social a:hover {
+    background-color: var(--color-mygrey-10);
+    /* Makes the background lighter when hovering over the icon */
+}
+
+
+/******************************** FOOTER STUFF ********************************/
+/* Controls how the footer at the bottom of the page looks */
+footer {
+    background-color: var(--color-mygrey-20);
+    /* Sets the footer background color */
+    padding: 1rem 0;
+    /* Adds space above and below the footer content */
+    text-align: center;
+    /* Centers the footer text */
+    font-weight: 200;
+    /* Makes the text thicker or thinner */
+    font-size: .75rem;
+    /* Sets the footer text size */
+}
